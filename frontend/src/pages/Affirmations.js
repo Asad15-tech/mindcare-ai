@@ -1,4 +1,5 @@
-import React, { useState, useEffect } from 'react';
+// import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 
 const affirmations = [
   { day: 1,  text: "You got this!", emoji: "💪" },
