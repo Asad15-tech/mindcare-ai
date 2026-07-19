@@ -6,7 +6,7 @@ const moods = [
   { emoji: '😕', label: 'Bad', score: 2, color: '#fb8c00' },
   { emoji: '😐', label: 'Okay', score: 3, color: '#fdd835' },
   { emoji: '🙂', label: 'Good', score: 4, color: '#7cb342' },
-  { emoji: '😄', label: 'Great', score: 5, color: '#2e7d32' },
+  { emoji: '😄', label: 'Great', score: 5, color: '#3A5C35' },
 ];
 
 function Dashboard({ user, setCurrentPage }) {
@@ -61,8 +61,8 @@ function Dashboard({ user, setCurrentPage }) {
           from { width: 0%; }
         }
         @keyframes pulseSoft {
-          0%, 100% { box-shadow: 0 0 0 0 rgba(46,125,50,0.25); }
-          50% { box-shadow: 0 0 0 8px rgba(46,125,50,0); }
+          0%, 100% { box-shadow: 0 0 0 0 rgba(176,208,168,0.25); }
+          50% { box-shadow: 0 0 0 8px rgba(176,208,168,0); }
         }
         .dash-fade { animation: fadeSlideUp 0.5s ease both; }
         .wave-emoji { display: inline-block; animation: wave 2.2s ease-in-out infinite; transform-origin: 70% 70%; }
@@ -72,12 +72,12 @@ function Dashboard({ user, setCurrentPage }) {
       <div
         className="dash-fade"
         style={{
-          background: 'linear-gradient(135deg, #2e7d32, #4a7c59)',
+          background: '#B0D0A8',
           borderRadius: '20px',
           padding: '28px 32px',
           marginBottom: '20px',
-          color: 'white',
-          boxShadow: '0 6px 20px rgba(46,125,50,0.25)',
+          color: '#3A5C35',
+          boxShadow: '0 6px 20px rgba(176,208,168,0.5)',
         }}
       >
         <h1 style={{ margin: 0, fontSize: '28px', fontFamily: 'Times New Roman' }}>
@@ -102,7 +102,7 @@ function Dashboard({ user, setCurrentPage }) {
           animationDelay: '0.05s',
         }}
       >
-        ⚠️ MindHaven is a wellness tool — not a substitute for professional therapy. In a crisis, please contact emergency services.
+        ⚠️ MindCare AI is a wellness tool — not a substitute for professional therapy. In a crisis, please contact emergency services.
       </div>
 
       {/* Stats grid */}
@@ -121,7 +121,7 @@ function Dashboard({ user, setCurrentPage }) {
             border: '1px solid #c8e6c9',
             transition: 'all 0.25s ease',
             transform: hoveredStat === 'mood' ? 'translateY(-4px)' : 'translateY(0)',
-            boxShadow: hoveredStat === 'mood' ? '0 10px 22px rgba(46,125,50,0.18)' : '0 2px 8px rgba(0,0,0,0.04)',
+            boxShadow: hoveredStat === 'mood' ? '0 10px 22px rgba(176,208,168,0.18)' : '0 2px 8px rgba(0,0,0,0.04)',
           }}
         >
           <div style={{ fontSize: '11px', letterSpacing: '0.5px', color: '#888', fontFamily: 'Times New Roman', marginBottom: '10px' }}>
@@ -148,8 +148,8 @@ function Dashboard({ user, setCurrentPage }) {
                         position: 'absolute',
                         bottom: `${heightPct}%`,
                         marginBottom: '6px',
-                        background: '#2e7d32',
-                        color: 'white',
+                        background: '#B0D0A8',
+                        color: '#3A5C35',
                         fontSize: '11px',
                         fontFamily: 'Times New Roman',
                         padding: '3px 7px',
@@ -189,13 +189,13 @@ function Dashboard({ user, setCurrentPage }) {
             border: '1px solid #c8e6c9',
             transition: 'all 0.25s ease',
             transform: hoveredStat === 'total' ? 'translateY(-4px)' : 'translateY(0)',
-            boxShadow: hoveredStat === 'total' ? '0 10px 22px rgba(46,125,50,0.18)' : '0 2px 8px rgba(0,0,0,0.04)',
+            boxShadow: hoveredStat === 'total' ? '0 10px 22px rgba(176,208,168,0.18)' : '0 2px 8px rgba(0,0,0,0.04)',
           }}
         >
           <div style={{ fontSize: '11px', letterSpacing: '0.5px', color: '#888', fontFamily: 'Times New Roman', marginBottom: '10px' }}>
             TOTAL MOOD ENTRIES
           </div>
-          <div style={{ fontSize: '34px', fontWeight: '800', color: '#2e7d32', fontFamily: 'Times New Roman' }}>
+          <div style={{ fontSize: '34px', fontWeight: '800', color: '#3A5C35', fontFamily: 'Times New Roman' }}>
             {moodCount} <span style={{ fontSize: '20px' }}>😊</span>
           </div>
         </div>
@@ -210,7 +210,7 @@ function Dashboard({ user, setCurrentPage }) {
             border: '1px solid #c8e6c9',
             transition: 'all 0.25s ease',
             transform: hoveredStat === 'journal' ? 'translateY(-4px)' : 'translateY(0)',
-            boxShadow: hoveredStat === 'journal' ? '0 10px 22px rgba(46,125,50,0.18)' : '0 2px 8px rgba(0,0,0,0.04)',
+            boxShadow: hoveredStat === 'journal' ? '0 10px 22px rgba(176,208,168,0.18)' : '0 2px 8px rgba(0,0,0,0.04)',
           }}
         >
           <div style={{ fontSize: '11px', letterSpacing: '0.5px', color: '#888', fontFamily: 'Times New Roman', marginBottom: '10px' }}>
@@ -234,7 +234,7 @@ function Dashboard({ user, setCurrentPage }) {
           animationDelay: '0.18s',
         }}
       >
-        <h3 style={{ fontFamily: 'Times New Roman', color: '#2e7d32', marginTop: 0, marginBottom: '16px' }}>
+        <h3 style={{ fontFamily: 'Times New Roman', color: '#3A5C35', marginTop: 0, marginBottom: '16px' }}>
           Quick Check-in ⚡
         </h3>
         <div style={{ display: 'grid', gridTemplateColumns: 'repeat(5, 1fr)', gap: '12px' }}>
@@ -281,9 +281,9 @@ function Dashboard({ user, setCurrentPage }) {
             onMouseEnter={() => setHoveredAction(action.id)}
             onMouseLeave={() => setHoveredAction(null)}
             style={{
-              background: hoveredAction === action.id ? 'linear-gradient(135deg, #2e7d32, #4a7c59)' : 'white',
-              color: hoveredAction === action.id ? 'white' : '#2e7d32',
-              border: '1.5px solid #2e7d32',
+              background: hoveredAction === action.id ? '#B0D0A8' : 'white',
+              color: '#3A5C35',
+              border: '1.5px solid #B0D0A8',
               borderRadius: '14px',
               padding: '16px',
               fontSize: '15px',
@@ -292,7 +292,7 @@ function Dashboard({ user, setCurrentPage }) {
               cursor: 'pointer',
               transition: 'all 0.25s ease',
               transform: hoveredAction === action.id ? 'translateY(-3px)' : 'translateY(0)',
-              boxShadow: hoveredAction === action.id ? '0 10px 20px rgba(46,125,50,0.3)' : '0 2px 6px rgba(0,0,0,0.05)',
+              boxShadow: hoveredAction === action.id ? '0 10px 20px rgba(176,208,168,0.5)' : '0 2px 6px rgba(0,0,0,0.05)',
             }}
           >
             {action.emoji} {action.label}

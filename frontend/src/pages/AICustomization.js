@@ -185,7 +185,7 @@ function AICustomization({ onSave }) {
   }, []);
 
   const handleSave = () => {
-    const data = { name: customName || name, skinColor, faceId, hatId, shirtId, bottomId, color: '#2e7d32', face: '🤖' };
+    const data = { name: customName || name, skinColor, faceId, hatId, shirtId, bottomId, color: '#3A5C35', face: '🤖' };
     localStorage.setItem('aiCustomization', JSON.stringify(data));
     if (onSave) onSave(data);
     setSaved(true);
@@ -199,17 +199,17 @@ function AICustomization({ onSave }) {
       <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '24px' }}>
         {/* Left - Preview + Name */}
         <div>
-          <div style={{ background: 'linear-gradient(135deg, #2e7d32, #4a7c59)', borderRadius: '20px', padding: '24px', textAlign: 'center', marginBottom: '16px' }}>
+          <div style={{ background: '#B0D0A8', borderRadius: '20px', padding: '24px', textAlign: 'center', marginBottom: '16px' }}>
             <CharacterSVG skinColor={skinColor} faceId={faceId} hatId={hatId} shirtId={shirtId} bottomId={bottomId} />
-            <div style={{ color: 'white', fontFamily: 'Times New Roman', fontSize: '20px', fontWeight: '800', marginTop: '8px' }}>{customName || name}</div>
-            <div style={{ color: 'rgba(255,255,255,0.8)', fontSize: '13px', fontFamily: 'Times New Roman' }}>Your AI Assistant</div>
+            <div style={{ color: '#3A5C35', fontFamily: 'Times New Roman', fontSize: '20px', fontWeight: '800', marginTop: '8px' }}>{customName || name}</div>
+            <div style={{ color: 'rgba(58,92,53,0.8)', fontSize: '13px', fontFamily: 'Times New Roman' }}>Your AI Assistant</div>
           </div>
           <div style={{ background: 'white', borderRadius: '14px', padding: '16px', border: '1px solid #c8e6c9', marginBottom: '16px' }}>
-            <h3 style={{ fontFamily: 'Times New Roman', color: '#2e7d32', marginBottom: '12px', fontSize: '15px' }}>🏷️ Name</h3>
+            <h3 style={{ fontFamily: 'Times New Roman', color: '#3A5C35', marginBottom: '12px', fontSize: '15px' }}>🏷️ Name</h3>
             <div style={{ display: 'grid', gridTemplateColumns: 'repeat(4, 1fr)', gap: '8px', marginBottom: '10px' }}>
               {AI_NAMES.map(n => (
                 <div key={n} onClick={() => { setName(n); setCustomName(''); }}
-                  style={{ background: name === n && !customName ? '#e8f5e9' : '#f0f7f0', borderRadius: '8px', padding: '8px', textAlign: 'center', cursor: 'pointer', border: name === n && !customName ? '2px solid #2e7d32' : '2px solid transparent', fontFamily: 'Times New Roman', color: '#2e7d32', fontSize: '13px', fontWeight: name === n && !customName ? '700' : '400' }}>
+                  style={{ background: name === n && !customName ? '#e8f5e9' : '#f0f7f0', borderRadius: '8px', padding: '8px', textAlign: 'center', cursor: 'pointer', border: name === n && !customName ? '2px solid #3A5C35' : '2px solid transparent', fontFamily: 'Times New Roman', color: '#3A5C35', fontSize: '13px', fontWeight: name === n && !customName ? '700' : '400' }}>
                   {n}
                 </div>
               ))}
@@ -220,15 +220,15 @@ function AICustomization({ onSave }) {
 
           {/* Shirt */}
           <div style={{ background: 'white', borderRadius: '14px', padding: '16px', border: '1px solid #c8e6c9', marginBottom: '16px' }}>
-            <h3 style={{ fontFamily: 'Times New Roman', color: '#2e7d32', marginBottom: '12px', fontSize: '15px' }}>👕 Shirt</h3>
+            <h3 style={{ fontFamily: 'Times New Roman', color: '#3A5C35', marginBottom: '12px', fontSize: '15px' }}>👕 Shirt</h3>
             <div style={{ display: 'grid', gridTemplateColumns: 'repeat(5, 1fr)', gap: '8px' }}>
               {SHIRTS.map(shirt => (
                 <div key={shirt.id} onClick={() => setShirtId(shirt.id)}
-                  style={{ background: shirtId === shirt.id ? '#e8f5e9' : '#f0f7f0', borderRadius: '10px', padding: '8px', textAlign: 'center', cursor: 'pointer', border: shirtId === shirt.id ? '2px solid #2e7d32' : '2px solid transparent' }}>
+                  style={{ background: shirtId === shirt.id ? '#e8f5e9' : '#f0f7f0', borderRadius: '10px', padding: '8px', textAlign: 'center', cursor: 'pointer', border: shirtId === shirt.id ? '2px solid #3A5C35' : '2px solid transparent' }}>
                   <svg width="40" height="34" viewBox="0 0 50 40" xmlns="http://www.w3.org/2000/svg">
                     <path d="M 8 8 L 2 20 L 10 22 L 12 14 L 38 14 L 40 22 L 48 20 L 42 8 L 32 4 L 25 7 L 18 4 Z" fill={shirt.color}/>
                   </svg>
-                  <div style={{ fontSize: '9px', color: '#2e7d32', fontFamily: 'Times New Roman', fontWeight: shirtId === shirt.id ? '700' : '400' }}>{shirt.name}</div>
+                  <div style={{ fontSize: '9px', color: '#3A5C35', fontFamily: 'Times New Roman', fontWeight: shirtId === shirt.id ? '700' : '400' }}>{shirt.name}</div>
                 </div>
               ))}
             </div>
@@ -236,17 +236,17 @@ function AICustomization({ onSave }) {
 
           {/* Bottom */}
           <div style={{ background: 'white', borderRadius: '14px', padding: '16px', border: '1px solid #c8e6c9' }}>
-            <h3 style={{ fontFamily: 'Times New Roman', color: '#2e7d32', marginBottom: '12px', fontSize: '15px' }}>👖 Pants / Shorts / Skirt</h3>
+            <h3 style={{ fontFamily: 'Times New Roman', color: '#3A5C35', marginBottom: '12px', fontSize: '15px' }}>👖 Pants / Shorts / Skirt</h3>
             <div style={{ display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gap: '8px' }}>
               {BOTTOMS.map(b => (
                 <div key={b.id} onClick={() => setBottomId(b.id)}
-                  style={{ background: bottomId === b.id ? '#e8f5e9' : '#f0f7f0', borderRadius: '10px', padding: '8px', textAlign: 'center', cursor: 'pointer', border: bottomId === b.id ? '2px solid #2e7d32' : '2px solid transparent' }}>
+                  style={{ background: bottomId === b.id ? '#e8f5e9' : '#f0f7f0', borderRadius: '10px', padding: '8px', textAlign: 'center', cursor: 'pointer', border: bottomId === b.id ? '2px solid #3A5C35' : '2px solid transparent' }}>
                   <svg width="40" height="34" viewBox="0 0 50 40" xmlns="http://www.w3.org/2000/svg">
                     {b.type === 'pants' && (<g><rect x="5" y="2" width="17" height="36" rx="6" fill={b.color}/><rect x="28" y="2" width="17" height="36" rx="6" fill={b.color}/></g>)}
                     {b.type === 'shorts' && (<g><path d="M 5 2 L 7 28 L 25 24 L 43 28 L 45 2 Z" fill={b.color}/>{b.id === 'shorts_star' && <text x="18" y="20" fontSize="14" fill="white">★</text>}</g>)}
                     {b.type === 'skirt' && (<path d="M 5 2 Q 4 35 25 38 Q 46 35 45 2 Z" fill={b.color}/>)}
                   </svg>
-                  <div style={{ fontSize: '9px', color: '#2e7d32', fontFamily: 'Times New Roman', fontWeight: bottomId === b.id ? '700' : '400' }}>{b.name}</div>
+                  <div style={{ fontSize: '9px', color: '#3A5C35', fontFamily: 'Times New Roman', fontWeight: bottomId === b.id ? '700' : '400' }}>{b.name}</div>
                 </div>
               ))}
             </div>
@@ -257,17 +257,17 @@ function AICustomization({ onSave }) {
         <div>
           {/* Hats */}
           <div style={{ background: 'white', borderRadius: '14px', padding: '16px', border: '1px solid #c8e6c9', marginBottom: '16px' }}>
-            <h3 style={{ fontFamily: 'Times New Roman', color: '#2e7d32', marginBottom: '12px', fontSize: '15px' }}>🎩 Hat</h3>
+            <h3 style={{ fontFamily: 'Times New Roman', color: '#3A5C35', marginBottom: '12px', fontSize: '15px' }}>🎩 Hat</h3>
             <div style={{ display: 'grid', gridTemplateColumns: 'repeat(4, 1fr)', gap: '8px' }}>
               {HATS.map(hat => (
                 <div key={hat.id} onClick={() => setHatId(hat.id)}
-                  style={{ background: hatId === hat.id ? '#e8f5e9' : '#f0f7f0', borderRadius: '10px', padding: '6px', textAlign: 'center', cursor: 'pointer', border: hatId === hat.id ? '2px solid #2e7d32' : '2px solid transparent' }}>
+                  style={{ background: hatId === hat.id ? '#e8f5e9' : '#f0f7f0', borderRadius: '10px', padding: '6px', textAlign: 'center', cursor: 'pointer', border: hatId === hat.id ? '2px solid #3A5C35' : '2px solid transparent' }}>
                   {hat.svg ? (
                     <svg width="50" height="40" viewBox="60 20 80 55" xmlns="http://www.w3.org/2000/svg">{hat.svg}</svg>
                   ) : (
                     <div style={{ height: '40px', display: 'flex', alignItems: 'center', justifyContent: 'center', fontSize: '18px' }}>❌</div>
                   )}
-                  <div style={{ fontSize: '10px', color: '#2e7d32', fontFamily: 'Times New Roman', fontWeight: hatId === hat.id ? '700' : '400' }}>{hat.name}</div>
+                  <div style={{ fontSize: '10px', color: '#3A5C35', fontFamily: 'Times New Roman', fontWeight: hatId === hat.id ? '700' : '400' }}>{hat.name}</div>
                 </div>
               ))}
             </div>
@@ -275,13 +275,13 @@ function AICustomization({ onSave }) {
 
           {/* Faces */}
           <div style={{ background: 'white', borderRadius: '14px', padding: '16px', border: '1px solid #c8e6c9', marginBottom: '16px' }}>
-            <h3 style={{ fontFamily: 'Times New Roman', color: '#2e7d32', marginBottom: '12px', fontSize: '15px' }}>😊 Face</h3>
+            <h3 style={{ fontFamily: 'Times New Roman', color: '#3A5C35', marginBottom: '12px', fontSize: '15px' }}>😊 Face</h3>
             <div style={{ display: 'grid', gridTemplateColumns: 'repeat(5, 1fr)', gap: '6px' }}>
               {FACES.map(face => (
                 <div key={face.id} onClick={() => setFaceId(face.id)}
-                  style={{ background: faceId === face.id ? '#e8f5e9' : '#f0f7f0', borderRadius: '10px', padding: '6px', textAlign: 'center', cursor: 'pointer', border: faceId === face.id ? '2px solid #2e7d32' : '2px solid transparent' }}>
+                  style={{ background: faceId === face.id ? '#e8f5e9' : '#f0f7f0', borderRadius: '10px', padding: '6px', textAlign: 'center', cursor: 'pointer', border: faceId === face.id ? '2px solid #3A5C35' : '2px solid transparent' }}>
                   <svg width="50" height="40" viewBox="60 80 80 55" xmlns="http://www.w3.org/2000/svg">{face.svg}</svg>
-                  <div style={{ fontSize: '9px', color: '#2e7d32', fontFamily: 'Times New Roman', fontWeight: faceId === face.id ? '700' : '400' }}>{face.name}</div>
+                  <div style={{ fontSize: '9px', color: '#3A5C35', fontFamily: 'Times New Roman', fontWeight: faceId === face.id ? '700' : '400' }}>{face.name}</div>
                 </div>
               ))}
             </div>
@@ -289,7 +289,7 @@ function AICustomization({ onSave }) {
 
           {/* Skin Colors */}
           <div style={{ background: 'white', borderRadius: '14px', padding: '16px', border: '1px solid #c8e6c9' }}>
-            <h3 style={{ fontFamily: 'Times New Roman', color: '#2e7d32', marginBottom: '12px', fontSize: '15px' }}>🎨 Skin Color</h3>
+            <h3 style={{ fontFamily: 'Times New Roman', color: '#3A5C35', marginBottom: '12px', fontSize: '15px' }}>🎨 Skin Color</h3>
             {['Fair - Light', 'Medium - Tan', 'Dark - Deep'].map(group => (
               <div key={group} style={{ marginBottom: '10px' }}>
                 <div style={{ fontSize: '12px', fontWeight: '700', color: '#555', fontFamily: 'Times New Roman', marginBottom: '6px' }}>{group}</div>
@@ -298,7 +298,7 @@ function AICustomization({ onSave }) {
                     <span style={{ fontSize: '10px', color: '#aaa', width: '48px', fontFamily: 'Times New Roman', flexShrink: 0 }}>{row.subgroup}</span>
                     {row.colors.map(color => (
                       <div key={color} onClick={() => setSkinColor(color)}
-                        style={{ width: '22px', height: '22px', background: color, borderRadius: '50%', cursor: 'pointer', border: skinColor === color ? '3px solid #2e7d32' : '2px solid #ddd', transform: skinColor === color ? 'scale(1.2)' : 'scale(1)', transition: 'all 0.2s', flexShrink: 0 }} />
+                        style={{ width: '22px', height: '22px', background: color, borderRadius: '50%', cursor: 'pointer', border: skinColor === color ? '3px solid #3A5C35' : '2px solid #ddd', transform: skinColor === color ? 'scale(1.2)' : 'scale(1)', transition: 'all 0.2s', flexShrink: 0 }} />
                     ))}
                   </div>
                 ))}
@@ -308,8 +308,8 @@ function AICustomization({ onSave }) {
         </div>
       </div>
 
-      {saved && <div style={{ background: '#e8f5e9', border: '1px solid #2e7d32', borderRadius: '10px', padding: '12px', textAlign: 'center', color: '#2e7d32', fontFamily: 'Times New Roman', fontWeight: '700', marginTop: '16px' }}>✅ Saved!</div>}
-      <button onClick={handleSave} style={{ width: '100%', background: 'linear-gradient(135deg, #2e7d32, #4a7c59)', color: 'white', border: 'none', borderRadius: '12px', padding: '14px', fontSize: '16px', cursor: 'pointer', fontWeight: '700', fontFamily: 'Times New Roman', marginTop: '16px' }}>
+      {saved && <div style={{ background: '#e8f5e9', border: '1px solid #3A5C35', borderRadius: '10px', padding: '12px', textAlign: 'center', color: '#3A5C35', fontFamily: 'Times New Roman', fontWeight: '700', marginTop: '16px' }}>✅ Saved!</div>}
+      <button onClick={handleSave} style={{ width: '100%', background: '#B0D0A8', color: '#3A5C35', border: 'none', borderRadius: '12px', padding: '14px', fontSize: '16px', cursor: 'pointer', fontWeight: '700', fontFamily: 'Times New Roman', marginTop: '16px' }}>
         💾 Save AI Assistant
       </button>
     </div>
