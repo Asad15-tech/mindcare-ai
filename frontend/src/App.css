@@ -430,11 +430,8 @@ textarea:focus { outline: none; border-color: var(--brand-green); }
   .chat-page { height: calc(100vh - 40px); }
 
   .login-container { flex-direction: column; }
-  .login-left { padding: 30px 20px; }
-  .login-brand h1 { font-size: 26px; }
-  .login-features { display: none; }
-  .login-testimonial { display: none; }
-  .login-right { width: 100%; padding: 30px 16px; }
+  .login-left { display: none; }
+  .login-right { width: 100%; min-height: 100vh; padding: 30px 16px; }
   .login-box { padding: 30px 22px; }
 
   .water-stats { flex-direction: column; gap: 12px; }
