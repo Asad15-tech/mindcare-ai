@@ -55,9 +55,9 @@ function AIHead({ hatId, skinColor }) {
 }
 
 function Chat({ user, aiData, setCurrentPage }) {
-  const ai = aiData || { name: 'Luna', color: '#2e7d32' };
+  const ai = aiData || { name: 'Luna', color: '#B0D0A8' };
   const [messages, setMessages] = useState([
-    { role: 'assistant', content: `Hello! I am ${ai.name}, your MindHaven wellness assistant. How are you feeling today? 💙` }
+    { role: 'assistant', content: `Hello! I am ${ai.name}, your MindCare AI wellness assistant. How are you feeling today? 💙` }
   ]);
   const [input, setInput] = useState('');
   const [apiKey, setApiKey] = useState('');
@@ -113,7 +113,7 @@ function Chat({ user, aiData, setCurrentPage }) {
   return (
     <div className="page chat-page" style={{ position: 'relative' }}>
       {/* AI Header */}
-      <div className="chat-ai-header" style={{ background: `linear-gradient(135deg, ${ai.color || '#2e7d32'}, #4a7c59)` }}>
+      <div className="chat-ai-header" style={{ background: ai.color || '#B0D0A8' }}>
         <div className="chat-ai-avatar" style={{ background: 'rgba(255,255,255,0.2)', borderRadius: '16px', padding: '8px' }}>
           <AIHead hatId={selectedHat} skinColor={skinColor} />
         </div>

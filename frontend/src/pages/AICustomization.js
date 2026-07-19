@@ -185,7 +185,7 @@ function AICustomization({ onSave }) {
   }, []);
 
   const handleSave = () => {
-    const data = { name: customName || name, skinColor, faceId, hatId, shirtId, bottomId, color: '#3A5C35', face: '🤖' };
+    const data = { name: customName || name, skinColor, faceId, hatId, shirtId, bottomId, color: '#B0D0A8', face: '🤖' };
     localStorage.setItem('aiCustomization', JSON.stringify(data));
     if (onSave) onSave(data);
     setSaved(true);

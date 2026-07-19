@@ -21,7 +21,7 @@ function App() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [aiData, setAiData] = useState({
     name: 'Luna',
-    color: '#2e7d32',
+    color: '#B0D0A8',
     skinColor: '#f5d0c5',
     faceId: 'cute',
     hatId: 'none',
@@ -97,7 +97,7 @@ function App() {
         <div className="sidebar-logo">
           <span>🧠</span>
           <div>
-            <div className="sidebar-title">MindHaven</div>
+            <div className="sidebar-title">MindCare AI</div>
             <div className="sidebar-sub">WELLNESS TRACKER</div>
           </div>
         </div>
