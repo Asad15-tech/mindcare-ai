@@ -114,7 +114,7 @@ function Chat({ user, aiData, setCurrentPage }) {
     <div className="page chat-page" style={{ position: 'relative' }}>
       {/* AI Header */}
       <div className="chat-ai-header" style={{ background: ai.color || '#B0D0A8' }}>
-        <div className="chat-ai-avatar" style={{ background: 'rgba(255,255,255,0.2)', borderRadius: '16px', padding: '8px' }}>
+        <div className="chat-ai-avatar" style={{ background: 'rgba(58,92,53,0.12)', borderRadius: '16px', padding: '8px' }}>
           <AIHead hatId={selectedHat} skinColor={skinColor} />
         </div>
         <div className="chat-ai-info">
@@ -124,7 +124,7 @@ function Chat({ user, aiData, setCurrentPage }) {
         {/* Personalize Button - goes straight to the full Customize page */}
         <button
           onClick={() => setCurrentPage && setCurrentPage('aiCustomization')}
-          style={{ marginLeft: 'auto', background: 'rgba(255,255,255,0.2)', border: '2px solid white', color: 'white', borderRadius: '10px', padding: '8px 14px', cursor: 'pointer', fontFamily: 'Times New Roman', fontSize: '13px', fontWeight: '600' }}
+          style={{ marginLeft: 'auto', background: 'rgba(58,92,53,0.12)', border: '2px solid #3A5C35', color: '#3A5C35', borderRadius: '10px', padding: '8px 14px', cursor: 'pointer', fontFamily: 'Times New Roman', fontSize: '13px', fontWeight: '600' }}
         >
           🎨 Personalize
         </button>
