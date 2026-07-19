@@ -57,7 +57,7 @@ function AIHead({ hatId, skinColor }) {
 function Chat({ user, aiData, setCurrentPage }) {
   const ai = aiData || { name: 'Luna', color: '#2e7d32' };
   const [messages, setMessages] = useState([
-    { role: 'assistant', content: `Hello! I am ${ai.name}, your MindCare AI wellness assistant. How are you feeling today? 💙` }
+    { role: 'assistant', content: `Hello! I am ${ai.name}, your MindHaven wellness assistant. How are you feeling today? 💙` }
   ]);
   const [input, setInput] = useState('');
   const [apiKey, setApiKey] = useState('');

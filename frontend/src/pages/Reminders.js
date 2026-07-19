@@ -26,7 +26,7 @@ function Reminders({ user }) {
       rems.forEach(r => {
         if (r.active && r.time === currentTime) {
           if (Notification.permission === 'granted') {
-            new Notification('MindCare AI Reminder 🧠', {
+            new Notification('MindHaven Reminder 🧠', {
               body: r.label,
               icon: '/favicon.ico'
             });

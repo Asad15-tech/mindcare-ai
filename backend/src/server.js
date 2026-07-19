@@ -21,7 +21,7 @@ app.use('/api/activity', activityRoutes);
 app.use('/api/chat', chatRoutes);
 
 app.get('/', (req, res) => {
-  res.json({ message: 'MindCare AI Backend Running!' });
+  res.json({ message: 'MindHaven Backend Running!' });
 });
 
 mongoose.connect(process.env.MONGO_URI)

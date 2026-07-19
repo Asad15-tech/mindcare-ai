@@ -102,7 +102,7 @@ function Dashboard({ user, setCurrentPage }) {
           animationDelay: '0.05s',
         }}
       >
-        ⚠️ MindCare AI is a wellness tool — not a substitute for professional therapy. In a crisis, please contact emergency services.
+        ⚠️ MindHaven is a wellness tool — not a substitute for professional therapy. In a crisis, please contact emergency services.
       </div>
 
       {/* Stats grid */}

@@ -87,7 +87,7 @@ function Login({ onLogin }) {
         <div className="login-left">
           <div className="login-brand">
             <span className="login-brain">🧠</span>
-            <h1>MindCare AI</h1>
+            <h1>MindHaven</h1>
           </div>
           <p className="login-tagline">Your personal mental wellness companion</p>
           <div className="login-features">
@@ -204,7 +204,7 @@ function Login({ onLogin }) {
       <div className="login-left">
         <div className="login-brand">
           <span className="login-brain">🧠</span>
-          <h1>MindCare AI</h1>
+          <h1>MindHaven</h1>
         </div>
         <p className="login-tagline">Your personal mental wellness companion</p>
         <div className="login-features">
@@ -238,14 +238,14 @@ function Login({ onLogin }) {
           </div>
         </div>
         <div className="login-testimonial">
-          <p>"MindCare AI helped me understand my emotional patterns and build healthier habits."</p>
+          <p>"MindHaven helped me understand my emotional patterns and build healthier habits."</p>
         </div>
       </div>
 
       <div className="login-right">
         <div className="login-box">
           <div className="login-box-brain">🧠</div>
-          <h2 className="login-box-title">MindCare AI</h2>
+          <h2 className="login-box-title">MindHaven</h2>
           <p className="login-box-sub">Your mental wellness companion</p>
           <h3 className="login-welcome">{isSignup ? 'Create Account' : 'Welcome back'}</h3>
           <p className="login-welcome-sub">{isSignup ? 'Start your wellness journey' : 'Sign in to continue your journey'}</p>

@@ -64,13 +64,13 @@ router.post('/send-otp', async (req, res) => {
     otpStore[email] = { otp, expiry: Date.now() + 10 * 60 * 1000 };
 
     await transporter.sendMail({
-      from: `"MindCare AI" <${process.env.EMAIL_USER}>`,
+      from: `"MindHaven" <${process.env.EMAIL_USER}>`,
       to: email,
-      subject: 'MindCare AI — Password Reset OTP',
+      subject: 'MindHaven — Password Reset OTP',
       html: `
         <div style="font-family: Arial, sans-serif; max-width: 500px; margin: 0 auto; padding: 30px; background: #f0f7f0; border-radius: 16px;">
           <div style="text-align: center; margin-bottom: 24px;">
-            <h1 style="color: #2e7d32; font-size: 28px;">🧠 MindCare AI</h1>
+            <h1 style="color: #2e7d32; font-size: 28px;">🧠 MindHaven</h1>
             <p style="color: #555;">Your Personal Mental Wellness Companion</p>
           </div>
           <div style="background: white; border-radius: 12px; padding: 24px; text-align: center; border: 1px solid #c8e6c9;">
@@ -82,7 +82,7 @@ router.post('/send-otp', async (req, res) => {
             <p style="color: #888; font-size: 14px;">⏱️ This OTP expires in <strong>10 minutes</strong></p>
             <p style="color: #888; font-size: 13px; margin-top: 8px;">If you didn't request this, please ignore this email.</p>
           </div>
-          <p style="text-align: center; color: #aaa; font-size: 12px; margin-top: 20px;">© 2024 MindCare AI — All rights reserved</p>
+          <p style="text-align: center; color: #aaa; font-size: 12px; margin-top: 20px;">© 2024 MindHaven — All rights reserved</p>
         </div>
       `
     });

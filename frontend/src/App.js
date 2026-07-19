@@ -97,7 +97,7 @@ function App() {
         <div className="sidebar-logo">
           <span>🧠</span>
           <div>
-            <div className="sidebar-title">MindCare AI</div>
+            <div className="sidebar-title">MindHaven</div>
             <div className="sidebar-sub">WELLNESS TRACKER</div>
           </div>
         </div>
