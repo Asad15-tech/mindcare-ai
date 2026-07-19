@@ -18,6 +18,7 @@ import './App.css';
 function App() {
   const [user, setUser] = useState(null);
   const [currentPage, setCurrentPage] = useState('home');
+  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [aiData, setAiData] = useState({
     name: 'Luna',
     color: '#2e7d32',
@@ -55,6 +56,11 @@ function App() {
 
   if (!user) return <Login onLogin={handleLogin} />;
 
+  const goToPage = (page) => {
+    setCurrentPage(page);
+    setMobileMenuOpen(false);
+  };
+
   const navItems = [
     { id: 'home', emoji: '🏠', label: 'Home' },
     { id: 'mood', emoji: '😊', label: 'Mood' },
@@ -72,7 +78,22 @@ function App() {
 
   return (
     <div className="app-container">
-      <aside className="sidebar">
+      {/* Hamburger button - only visible on mobile via CSS */}
+      <button
+        className="mobile-menu-btn"
+        onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
+        aria-label="Toggle menu"
+      >
+        {mobileMenuOpen ? '✕' : '☰'}
+      </button>
+
+      {/* Dark overlay behind sidebar on mobile */}
+      <div
+        className={`mobile-overlay ${mobileMenuOpen ? 'open' : ''}`}
+        onClick={() => setMobileMenuOpen(false)}
+      />
+
+      <aside className={`sidebar ${mobileMenuOpen ? 'sidebar-open' : ''}`}>
         <div className="sidebar-logo">
           <span>🧠</span>
           <div>
@@ -82,7 +103,7 @@ function App() {
         </div>
         <nav className="sidebar-nav">
           {navItems.map(item => (
-            <div key={item.id} className={`nav-item ${currentPage === item.id ? 'active' : ''}`} onClick={() => setCurrentPage(item.id)}>
+            <div key={item.id} className={`nav-item ${currentPage === item.id ? 'active' : ''}`} onClick={() => goToPage(item.id)}>
               <span>{item.emoji}</span>
               <span>{item.label}</span>
             </div>
@@ -93,7 +114,7 @@ function App() {
           {/* Customize link - styled like other nav items */}
           <div
             className="nav-item"
-            onClick={() => setCurrentPage('aiCustomization')}
+            onClick={() => goToPage('aiCustomization')}
             title="Customize your character & AI"
           >
             <span>✏️</span>
@@ -128,6 +149,7 @@ function App() {
 
       {/* Floating avatar icon - shows on every page, right side. Full body only shows on Customize page */}
       <div
+        className="floating-avatar-btn"
         onClick={() => setCurrentPage('aiCustomization')}
         title="Customize your character & AI"
         style={{
